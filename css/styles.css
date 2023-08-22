@@ -1,0 +1,84 @@
+section {
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  padding: 50px;
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+  background: linear-gradient(to top, #c4efff 0%, #89b8ed 100%);
+}
+form {
+  text-align: left;
+}
+input {
+  background: #89b8ed;
+}
+input::placeholder {
+  text-align: right;
+  font-size: smaller;
+  font-family: "Rubik", sans-serif;
+  background-color: #89b8ed;
+  color: white;
+}
+button {
+  background: transparent;
+  border: none;
+}
+button:hover {
+  color: white;
+}
+.container {
+  text-align: center;
+}
+.default-location {
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.main-temperature {
+  font-size: 100px;
+  font-weight: bold;
+}
+.fa-sun {
+  color: #fff1a3;
+}
+.fa-cloud {
+  color: #ffff;
+}
+.main-icon {
+  font-size: 425px;
+}
+.row {
+  font-size: 150%;
+}
+.col-4 {
+  font-size: 30px;
+}
+.dates {
+  text-align: left;
+  font-size: 40px;
+  padding: 10px auto;
+  border: 10px;
+}
+.col-2 {
+  text-align: center;
+}
+.weather-icon {
+  font-size: 60px;
+}
+.daily-temperature {
+  font-weight: 75%;
+  font-size: 30px;
+  opacity: 0.6;
+}
+
+.divider,
+#celsius {
+  font-size: 55px;
+}
+#fahrenheit,
+#celsius:hover {
+  cursor: pointer;
+}
