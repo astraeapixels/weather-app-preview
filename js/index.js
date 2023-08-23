@@ -37,9 +37,51 @@ let dateOfMonth = now.getDate();
 let year = now.getFullYear();
 
 let currentDate = document.querySelector("#date-of-month");
+let firstDate = document.querySelector("#first-date");
+let lastDate = document.querySelector("#last-date");
+
 let formattedDate = `${month} ${dateOfMonth}, ${year}`;
+let showFirst = `${month} ${dateOfMonth + 1}`;
+let showLast = `${month} ${dateOfMonth + 5}`;
 
 currentDate.innerHTML = `${formattedDate}`;
+firstDate.innerHTML = `${showFirst}`;
+lastDate.innerHTML = `${showLast}`;
+
+let dayOfWeek = [
+  `S`,
+  `M`,
+  `T`,
+  `W`,
+  `T`,
+  `F`,
+  `S`,
+  `S`,
+  `M`,
+  `T`,
+  `W`,
+  `T`,
+  `F`,
+  `S`,
+];
+
+let dayOne = document.querySelector("#day-one");
+dayOne.innerHTML = `${dayOfWeek[now.getDay() + 1]}`;
+
+let dayTwo = document.querySelector("#day-two");
+dayTwo.innerHTML = `${dayOfWeek[now.getDay() + 2]}`;
+
+let dayThree = document.querySelector("#day-three");
+dayThree.innerHTML = `${dayOfWeek[now.getDay() + 3]}`;
+
+let dayFour = document.querySelector("#day-four");
+dayFour.innerHTML = `${dayOfWeek[now.getDay() + 4]}`;
+
+let dayFive = document.querySelector("#day-five");
+dayFive.innerHTML = `${dayOfWeek[now.getDay() + 5]}`;
+
+let daySix = document.querySelector("#day-six");
+daySix.innerHTML = `${dayOfWeek[now.getDay() + 6]}`;
 
 function temperature(response) {
   let LocationTemperature = Math.round(response.data.main.temp);
