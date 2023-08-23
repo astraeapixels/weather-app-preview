@@ -82,3 +82,7 @@ button:hover {
 #celsius:hover {
   cursor: pointer;
 }
+
+#page-credit {
+  font-family: "Rubik", sans-serif;
+}
