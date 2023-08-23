@@ -42,7 +42,7 @@ let lastDate = document.querySelector("#last-date");
 
 let formattedDate = `${month} ${dateOfMonth}, ${year}`;
 let showFirst = `${month} ${dateOfMonth + 1}`;
-let showLast = `${month} ${dateOfMonth + 5}`;
+let showLast = `${month} ${dateOfMonth + 6}`;
 
 currentDate.innerHTML = `${formattedDate}`;
 firstDate.innerHTML = `${showFirst}`;
