@@ -6,7 +6,7 @@ section {
   display: block;
   margin: 0 auto;
   border-radius: 25px;
-  background: linear-gradient(to top, #c4efff 0%, #89b8ed 100%);
+  background: linear-gradient(to top, #c4efff 0%, #89b8ed 75%);
 }
 form {
   text-align: left;
