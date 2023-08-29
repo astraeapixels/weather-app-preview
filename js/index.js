@@ -41,10 +41,34 @@ let firstDate = document.querySelector("#first-date");
 let lastDate = document.querySelector("#last-date");
 
 let formattedDate = `${month} ${dateOfMonth}, ${year}`;
-let showFirst = `${month} ${dateOfMonth + 1}`;
-let showLast = `${month} ${dateOfMonth + 6}`;
-
 currentDate.innerHTML = `${formattedDate}`;
+
+function futureDate(day) {
+  var future = new Date();
+  let month = future.getMonth();
+  let year = future.getFullYear();
+
+  var getDaysInMonth = function (month, year) {
+    return new Date(year, month, 0).getDate();
+  };
+
+  let monthDaysNumber = getDaysInMonth(month, year);
+  let newDate = future.setDate(future.getDate() + day);
+
+  if (newDate > monthDaysNumber) {
+    return future;
+  }
+}
+
+let firstMonth = months[futureDate(1).getMonth()];
+let firstDay = futureDate(1).getDate();
+
+let lastMonth = months[futureDate(6).getMonth()];
+let lastDay = futureDate(6).getDate();
+
+let showFirst = `${firstMonth} ${firstDay}`;
+let showLast = `${lastMonth} ${lastDay}`;
+
 firstDate.innerHTML = `${showFirst}`;
 lastDate.innerHTML = `${showLast}`;
 
