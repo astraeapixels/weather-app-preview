@@ -8,6 +8,7 @@ section {
   border-radius: 25px;
   background: linear-gradient(to top, #c4efff 0%, #89b8ed 75%);
 }
+
 form {
   text-align: left;
 }
@@ -31,6 +32,18 @@ button:hover {
 .container {
   text-align: center;
 }
+.second-section {
+  background: linear-gradient(to top, #1d1f4a 0%, #2e3168 75%);
+  color: white;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  padding: 50px;
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
 .default-location {
   text-transform: capitalize;
   text-align: center;
