@@ -195,3 +195,5 @@ function getCurrentPosition(event) {
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentPosition);
+
+searchCity(`Los Angeles`);
