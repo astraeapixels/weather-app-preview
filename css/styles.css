@@ -55,6 +55,7 @@ button:hover {
 }
 .col-4 {
   font-size: 30px;
+  text-transform: capitalize;
 }
 .dates {
   text-align: left;
