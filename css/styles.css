@@ -52,6 +52,12 @@ button:hover {
   border-radius: 25px;
 }
 
+a {
+  color: #0a58ca;
+}
+a:hover {
+  color: #2e3168;
+}
 .default-location {
   text-transform: capitalize;
   text-align: center;
