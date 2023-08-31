@@ -1,14 +1,28 @@
 let now = new Date();
-let days = [
-  `Sunday`,
-  `Monday`,
-  `Tuesday`,
-  `Wednesday`,
-  `Thursday`,
-  "Friday",
-  `Saturday`,
-];
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    `Sunday`,
+    `Monday`,
+    `Tuesday`,
+    `Wednesday`,
+    `Thursday`,
+    "Friday",
+    `Saturday`,
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 let months = [
   `January`,
   `February`,
@@ -23,14 +37,6 @@ let months = [
   `November`,
   `December`,
 ];
-
-let day = days[now.getDay()];
-
-let hours = now.getHours();
-let minutes = now.getMinutes();
-
-let weekDay = document.querySelector("#week-day");
-weekDay.innerHTML = `${day} <strong>${hours}:${minutes}</strong>`;
 
 let month = months[now.getMonth()];
 let dateOfMonth = now.getDate();
@@ -113,6 +119,7 @@ function temperature(response) {
   let humidity = response.data.main.humidity;
   let windSpeed = Math.round(response.data.wind.speed);
   let description = response.data.weather[0].main;
+  let dateElement = formatDate(response.data.dt * 1000);
 
   console.log(response);
   console.log(response.data.wind);
@@ -138,6 +145,9 @@ function temperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   showIcon.setAttribute("alt", response.data.weather[0].description);
+
+  let showDate = document.querySelector("#week-day");
+  showDate.innerHTML = `${dateElement}`;
 }
 
 function searchCity(city) {
