@@ -11,7 +11,7 @@ section {
   padding: 50px;
   width: 1000px;
   display: block;
-  margin: 50px 50px 0px 150px;
+  margin: 0 auto;
   border-radius: 25px;
   background: linear-gradient(to top, #c4efff 0%, #89b8ed 75%);
 }
@@ -64,6 +64,9 @@ a {
 }
 a:hover {
   color: #2e3168;
+}
+.container {
+  margin-top: 50px;
 }
 .default-location {
   text-transform: capitalize;
