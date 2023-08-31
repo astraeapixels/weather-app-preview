@@ -33,11 +33,19 @@ button:hover {
   text-align: center;
 }
 .second-section {
+  list-style: none;
+  text-align: right;
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+.third-section {
   background: linear-gradient(to top, #1d1f4a 0%, #2e3168 75%);
   color: white;
   text-align: center;
   font-family: "Rubik", sans-serif;
-  padding: 50px;
+  padding: 35px;
   width: 1000px;
   display: block;
   margin: 0 auto;
@@ -51,7 +59,7 @@ button:hover {
   margin: 0 auto;
 }
 .main-temperature {
-  font-size: 100px;
+  font-size: 150px;
   font-weight: bold;
 }
 .fa-sun {
@@ -60,13 +68,11 @@ button:hover {
 .fa-cloud {
   color: #ffff;
 }
-.main-icon {
-  font-size: 425px;
-}
 .row {
-  font-size: 150%;
+  font-size: 45px;
 }
 .col-4 {
+  list-style: none;
   font-size: 30px;
   text-transform: capitalize;
 }
@@ -96,9 +102,17 @@ button:hover {
 #celsius:hover {
   cursor: pointer;
 }
-#last-update {
-  font-size: 40px;
+#main-icon {
+  text-align: center;
+  font-size: 70px;
+}
+#date-update {
+  font: 55px;
 }
 #page-credit {
   font-family: "Rubik", sans-serif;
+}
+#icon {
+  height: max-content;
+  width: max-content;
 }

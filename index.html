@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="default-location">
-                            <div id="location">Grand Rapids, MI, USA</div>
+                            <div id="location">Grand Rapids</div>
                             <div class="main-temperature" id="default-temperature">
                                 <span id="temp-on-display">86</span>°<a href="#" id="fahrenheit">F</a>
                                 <span class="divider">
@@ -44,30 +44,34 @@
                                     </a>
                                 </span>
                             </div>
-                            <span id="last-update">Last updated: </span><span id="week-day">Sunday</span>
-                            <div id="date-of-month">July 30, 2023</div>
                         </div>
                     </div>
+                    <br>
                     <div class="col-6">
-                        <div class="main-icon">
-                            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" id="icon">
+                        <div class="weather-icon">
+                            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" id="main-icon">
+                        </div>
+                        <div class="second-section">
+                            <ul>
+                                <li class="col-4">
+                                    <strong>Humidity:</strong> <span id="humidity">55</span>%
+                                </li>
+                                <li class="col-4" id="description">
+                                    Sunny
+                                </li>
+                                <li class="col-4">
+                                    <strong>Wind:</strong> <span id="wind">8</span>m/h
+                                </li>
+                            </ul>
                         </div>
                     </div>
             </h1>
-            <div class="row">
-                <div class="col-4">
-                    <strong>Humidity:</strong> <span id="humidity">55</span>%
-                </div>
-                <div class="col-4" id="description">
-                    Sunny
-                </div>
-                <div class="col-4">
-                    <strong>Wind:</strong> <span id="wind">8</span>m/h
-                </div>
-            </div>
         </section>
-        <br>
-        <div class="second-section">
+        <div id="date-update">
+            <span id="last-update">Last updated: </span><span id="week-day">Sunday</span>
+            <div id="date-of-month">July 30, 2023</div>
+        </div>
+        <div class="third-section">
             <h2>
                 <div class="dates">
                     <span id="first-date">July 30</span> - <span id="last-date">August 5</span>

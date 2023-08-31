@@ -132,7 +132,7 @@ function temperature(response) {
   let showDescription = document.querySelector("#description");
   showDescription.innerHTML = `${description}`;
 
-  let showIcon = document.querySelector("#icon");
+  let showIcon = document.querySelector("#main-icon");
   showIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
