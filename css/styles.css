@@ -1,10 +1,17 @@
+body {
+  background-image: url(blue-sky.jpg);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center right;
+}
 section {
   text-align: center;
   font-family: "Rubik", sans-serif;
   padding: 50px;
   width: 1000px;
   display: block;
-  margin: 0 auto;
+  margin: 50px 50px 0px 150px;
   border-radius: 25px;
   background: linear-gradient(to top, #c4efff 0%, #89b8ed 75%);
 }
