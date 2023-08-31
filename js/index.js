@@ -112,7 +112,7 @@ function temperature(response) {
   let city = response.data.name;
   let humidity = response.data.main.humidity;
   let windSpeed = Math.round(response.data.wind.speed);
-  let description = response.data.weather[0].description;
+  let description = response.data.weather[0].main;
 
   console.log(response);
   console.log(response.data.wind);
