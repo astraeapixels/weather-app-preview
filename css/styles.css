@@ -38,6 +38,7 @@ button:hover {
 }
 .container {
   text-align: center;
+  margin-top: 60px;
 }
 .second-section {
   list-style: none;
@@ -64,9 +65,6 @@ a {
 }
 a:hover {
   color: #2e3168;
-}
-.container {
-  margin-top: 60px;
 }
 .default-location {
   text-transform: capitalize;
