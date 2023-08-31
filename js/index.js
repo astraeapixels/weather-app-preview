@@ -21,8 +21,9 @@ function formatDate(timestamp) {
     `Saturday`,
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} <strong>${hours}:${minutes}</strong>`;
 }
+
 let months = [
   `January`,
   `February`,
