@@ -88,7 +88,6 @@ a:hover {
 .col-4 {
   list-style: none;
   font-size: 30px;
-  text-transform: capitalize;
 }
 .dates {
   text-align: left;
@@ -119,6 +118,9 @@ a:hover {
 #main-icon {
   text-align: center;
   font-size: 70px;
+}
+#wind {
+  text-transform: capitalize;
 }
 #date-update {
   font-family: "Rubik", sans-serif;
