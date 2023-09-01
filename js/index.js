@@ -178,11 +178,11 @@ searchButton.addEventListener("click", searchLocation);
 
 function celsiusConverter(event) {
   event.preventDefault();
-  let celciusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
+  let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
   let celsiusWind = windSpeed * 1.609344;
 
   let showCelsiusTemp = document.querySelector("#temp-on-display");
-  showCelsiusTemp.innerHTML = `${Math.round(celciusTemperature)}`;
+  showCelsiusTemp.innerHTML = `${Math.round(celsiusTemperature)}`;
 
   let showCelsiusWind = document.querySelector("#wind");
   showCelsiusWind.innerHTML = `${Math.round(celsiusWind)}`;
