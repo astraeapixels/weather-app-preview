@@ -119,14 +119,14 @@ function temperature(response) {
   let humidity = response.data.main.humidity;
   let description = response.data.weather[0].main;
   let dateElement = formatDate(response.data.dt * 1000);
-  farenheitTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
   windSpeed = response.data.wind.speed;
 
   console.log(response);
   console.log(response.data.wind);
 
   let showTemperature = document.querySelector("#temp-on-display");
-  showTemperature.innerHTML = Math.round(farenheitTemperature);
+  showTemperature.innerHTML = Math.round(fahrenheitTemperature);
 
   let showCity = document.querySelector("#location");
   showCity.innerHTML = `${city}`;
@@ -178,7 +178,7 @@ searchButton.addEventListener("click", searchLocation);
 
 function celsiusConverter(event) {
   event.preventDefault();
-  let celciusTemperature = (farenheitTemperature - 32) * (5 / 9);
+  let celciusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
   let celsiusWind = windSpeed * 1.609344;
 
   let showCelsiusTemp = document.querySelector("#temp-on-display");
@@ -189,25 +189,35 @@ function celsiusConverter(event) {
 
   let celsiusspeedMetric = document.querySelector("#speed-metric");
   celsiusspeedMetric.innerHTML = `km/h`;
+
+  let celsiusMainUnit = document.querySelector("#fahrenheit");
+  celsiusMainUnit.innerHTML = `C`;
+  let fahrenheitSmallUnit = document.querySelector("#celsius");
+  fahrenheitSmallUnit.innerHTML = `F`;
 }
 
-function farenheitConverter(event) {
+function fahrenheitConverter(event) {
   event.preventDefault();
-  let showFarenheitTemp = document.querySelector("#temp-on-display");
-  showFarenheitTemp.innerHTML = Math.round(farenheitTemperature);
+  let showFahrenheitTemp = document.querySelector("#temp-on-display");
+  showFahrenheitTemp.innerHTML = Math.round(fahrenheitTemperature);
 
   let showCelsiusWind = document.querySelector("#wind");
   showCelsiusWind.innerHTML = `${Math.round(windSpeed)}`;
 
   let celsiusspeedMetric = document.querySelector("#speed-metric");
   celsiusspeedMetric.innerHTML = `m/h`;
+
+  let fahrenheitMainUnit = document.querySelector("#fahrenheit");
+  fahrenheitMainUnit.innerHTML = `F`;
+  let celsiusSmallUnit = document.querySelector("#celsius");
+  celsiusSmallUnit.innerHTML = `C`;
 }
 
 let tempConversion = document.querySelector("#celsius");
 tempConversion.addEventListener("click", celsiusConverter);
 
 let conversionBack = document.querySelector("#fahrenheit");
-conversionBack.addEventListener("click", farenheitConverter);
+conversionBack.addEventListener("click", fahrenheitConverter);
 
 function showPosition(position) {
   console.log(position);
@@ -226,7 +236,7 @@ function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-let farenheitTemperature = null;
+let fahrenheitTemperature = null;
 let windSpeed = null;
 
 let currentLocationButton = document.querySelector("#current-location");
